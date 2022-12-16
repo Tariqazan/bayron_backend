@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="" id="navigation">
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="{% static 'media/bayron-corporation-white-bg.jpg' %}" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-4">
+
+            </ul>
+        </div>
+    </nav>
+</div>
+<div class="" id="contact">
+    <div class="container-white_bg">
+        <div class="contact-form pt-5">
+            <div class="text-center">
+                <p class="contact-form-profile">お問い合わせ</p>
+                <p class="title poppins-semibold">CONTACT</p>
+            </div>
+            <form action="{% url 'email_form' %}" method="post">
+                {% csrf_token %}
+                <div class="contact-point">
+                    <p class="point-title border-top hiragino text-center">名前</p>
+                    <input type="text" class="contact-info" name="name" id="" placeholder="株式会社バリオン">
+                </div>
+                <div class="contact-point">
+                    <p class="point-title border-top hiragino text-center">メールアドレス</p>
+                    <input type="text" class="contact-info" name="email" id="" placeholder="example@baryon.jp">
+                </div>
+                <div class="contact-point">
+                    <p class="point-title border-top hiragino text-center">メールアドレス（再確認）</p>
+                    <input type="text" class="contact-info" name="reconfirm_email" id=""
+                        placeholder="example@baryon.jp">
+                </div>
+                <div class="contact-point">
+                    <p class="point-title border-top border-bottom hiragino text-center">お問い合わせ内容</p>
+                    <textarea type="text" class="contact-info" name="content" id="" placeholder="内容"
+                        rows="4"></textarea>
+                </div>
+                <div class="text-center pb-4 pt-2">
+                    <button class="contact-btn">送信</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<footer class="footer" id="footer">
+    <p>@ 2021 ALL RIGHTS RESERVED. BARYON PARTNERS CORPORATION LTD</p>
+    <div class="d-flex justify-content-end">
+        <p>WEBSITE BY</p>
+        <p class="fw-bolder ms-3">MDC.</p>
+    </div>
+</footer>
+{% endblock content %}

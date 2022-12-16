@@ -1,0 +1,268 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block loader %}
+<div id="loading-screen">
+    <div id="loader"><img src="{% static 'media/loading-img.jpg' %}" alt=""></div>
+</div>
+{% endblock loader %}
+{% block content %}
+
+<div id="main-body">
+    <div class="" id="navigation" style="display: none;">
+        <nav class="navbar navbar-expand-lg bg-white fixed-top">
+            <a class="navbar-brand" href="{% url 'home' %}">
+                <img src="{% static 'media/bayron-corporation-white-bg.png' %}" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-4">
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <section class="fixed" id="banner">
+        <div class="banner">
+            <div class="logo">
+                <img src="{% static 'media/logo.png' %}" alt="logo">
+            </div>
+            <div class="container">
+                <div class="banner-content">
+                    <h1 class="poppins-semibold">Your Passion, <br> Our Passion.</h1>
+                    <p class="noto-sans">”良いもの” を ”欲しい人” へ届ける</p>
+                </div>
+            </div>
+            <div class="overlay-banner"></div>
+            <div class="overlay-banner-right"></div>
+            <div class="corporation-logo">
+                <img src="{% static 'media/baryon_partner_corporation-large.png' %}" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="fixed" id="info_1">
+        <div class="container-white_bg info_1 padding-transition padding-x">
+            <div class="bayron-partners-corporation-content-logo">
+                <img src="{% static 'media/round_b.png' %}" class="img_slide_up" alt="">
+            </div>
+            <div class="bayron-partners-corporation-content_bg">
+                <div class="bayron-partners-corporation-content slide_down_text">
+                    <img src="{% static 'media/baryon_partner_corporation.png' %}" alt="">
+                    <p class="description noto-sans">
+                    （株）バリオンパートナーズでは、アパレル事業、インテリア事業、陶磁器事業の3事業を通して、お客様の幅広いニーズにお応えするとともに、地球の環境と安全に貢献できる、存在感のある企業を目指してまいります。お客様、お取引先、ステークホルダー、地域、社会、社員、家族、すべての人と人の繋がりを大切に、１００年、そして、次の１００年を目指してまいります。
+                    </p>
+                </div>
+            </div>
+        </div>
+        <p class="mt-2 text-center footer-text">APPAREL</p>
+    </section>
+    <section class="fixed" id="info_2">
+        <div class="container-white_bg padding-x">
+            <div class="product-info_bg">
+                <div class="product-info slide_down_text">
+                    <p class="category">アパレル事業</p>
+                    <p class="title poppins-semibold">Apparel</p>
+                    <div class="partner-company row">
+                        <div class="logo col-md-3 col-6">
+                            <img src="{% static 'media/hurch.png' %}" alt="" class="partner-logo">
+                        </div>
+                        <div class="logo col-md-3 col-6">
+                            <img src="{% static 'media/pigskins.png' %}" alt="" class="partner-logo">
+                        </div>
+                        <div class="logo col-md-3 col-6">
+                            <img src="{% static 'media/teftef.png' %}" alt="" class="partner-logo">
+                        </div>
+                        <div class="logo col-md-3 col-6">
+                            <img src="{% static 'media/BritishSoftShoes White.png' %}" alt="" class="partner-logo mt-3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-img">
+                <img src="{% static 'media/shirt.webp' %}" class="slide_up_img" alt="">
+            </div>
+        </div>
+        <p class="mt-2 text-center footer-text">INTERIOR</p>
+    </section>
+    <section class="fixed" id="info_3">
+        <div class="container-white_bg padding-x">
+            <div class="product-info_bg">
+                <div class="product-info slide_up_text">
+                    <p class="category">ペット事業</p>
+                    <p class="title poppins-semibold">Pet</p>
+                    <div class="partner-company row">
+                        <div class="logo col-md-4 col-6">
+                            <img src="{% static 'media/marjorie.png' %}" alt="" class="partner-logo">
+                        </div>
+                        <div class="logo col-md-4 col-6">
+                            <img src="{% static 'media/podpuppy.png' %}" alt="" class="partner-logo">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-img">
+                <img src="{% static 'media/dog.avif' %}" class="slide_down_img" alt="">
+            </div>
+        </div>
+        <p class="mt-2 text-center footer-text">TABLEWARE</p>
+    </section>
+    <section class="fixed" id="company_info">
+        <div class="container-white_bg padding-x">
+            <div class="company-info">
+                <div class="row">
+                    <div class="col-md-8 align-item_center">
+                        <p class="company-info_title noto-sans">欧州を中心としたブランドの輸入およびライセンス製造販売</p>
+                        <p class="company-info_description noto-sans">
+                            日本総代理店として、海外ブランド(主にイギリス)を日本に広める事業をしています。業者様への輸入販売から、ブランドEC運営、国内でのライセンス製造販売なども展開しております。また保有する海外ネットワークを基盤に、国内ブランドの輸出事業も展開しております。
+                        </p>
+                        <div class="d-flex mt-4">
+                            <button class="company-info_btn_blue" id="overseas">海外ブランド</button>
+                            <button class="company-info_btn" id="domestic">国内ブランド</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4 domestic-brands">
+                        <div class="item-img">
+                            <img src="{% static 'media/baryon-hurch.jpg' %}" class="slide_up_img item-img_main" alt="">
+                            <img src="{% static 'media/hurch.png' %}" alt="" class="item_img-logo">
+                            <div class="img-overlay">
+                                <p class="text">Hurch</p>
+                                <span class="sub-text">
+                                    UNITED KINGDOM <br>
+                                    APPAREL PRODUCTS <br>
+                                    日本総代理店
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 domestic-brands">
+                        <div class="item-img">
+                            <img src="{% static 'media/Baryon-Marjoriepng.png' %}" class="slide_down_img item-img_main" alt="">
+                            <img src="{% static 'media/marjorie.png' %}" alt="" class="item_img-logo">
+                            <div class="img-overlay">
+                                <p class="text">Marjorie</p>
+                                <span class="sub-text">
+                                    UNITED KINGDOM <br>
+                                    APPAREL PRODUCTS <br>
+                                    日本総代理店
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 domestic-brands">
+                        <div class="item-img">
+                            <img src="{% static 'media/baryon-pigskins.png' %}" class="slide_down_img item-img_main" alt="">
+                            <img src="{% static 'media/pigskins.png' %}" alt="" class="item_img-logo">
+                            <div class="img-overlay">
+                                <p class="text">pigskins</p>
+                                <span class="sub-text">
+                                    UNITED KINGDOM <br>
+                                    APPAREL PRODUCTS <br>
+                                    日本総代理店
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 domestic-brands">
+                        <div class="item-img">
+                            <img src="{% static 'media/Bayon-BritishSoftShoes.jpg' %}" class="slide_down_img item-img_main" alt="">
+                            <img src="{% static 'media/BritishSoftShoes White.png' %}" alt="" class="item_img-logo">
+                            <div class="img-overlay">
+                                <p class="text">British Soft Shoes</p>
+                                <span class="sub-text">
+                                    UNITED KINGDOM <br>
+                                    APPAREL PRODUCTS <br>
+                                    日本総代理店
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 overseas-brands">
+                        <div class="item-img">
+                            <img src="{% static 'media/Baryon-TefTef.png' %}" class="slide_down_img item-img_main" alt="">
+                            <img src="{% static 'media/teftef.png' %}" alt="" class="item_img-logo">
+                            <div class="img-overlay">
+                                <p class="text">TefTef</p>
+                                <span class="sub-text">
+                                    UNITED KINGDOM <br>
+                                    APPAREL PRODUCTS <br>
+                                    海外総代理店
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 domestic-brands">
+                        <div class="item-img">
+                            <img src="{% static 'media/Baryon-PodPuppy.png' %}" class="slide_down_img item-img_main" alt="">
+                            <img src="{% static 'media/podpuppy.png' %}" alt="" class="item_img-logo">
+                            <div class="img-overlay">
+                                <p class="text">PodPuppy</p>
+                                <span class="sub-text">
+                                    UNITED KINGDOM <br>
+                                    APPAREL PRODUCTS <br>
+                                    日本総代理店
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="" id="company">
+        <div class="container-white_bg padding-x">
+            <div class="company">
+                <div class="text-center">
+                    <p class="company-profile">会社概要</p>
+                    <p class="title poppins-semibold">company</p>
+                </div>
+                <div class="compnay-point">
+                    <p class="point-title border-top hiragino text-center">会社名</p>
+                    <p class="point-detail">株式会社バリオンパートナーズ</p>
+                </div>
+                <div class="compnay-point">
+                    <p class="point-title border-top hiragino text-center">業務内容</p>
+                    <p class="point-detail">アパレル、家具、陶磁器の販売並びに輸出入</p>
+                </div>
+                <div class="compnay-point">
+                    <p class="point-title border-top hiragino text-center">メールアドレス</p>
+                    <p class="point-detail">info@baryon.jp</p>
+                </div>
+                <div class="compnay-point">
+                    <p class="point-title border-top hiragino text-center">代表取締役</p>
+                    <p class="point-detail">姫野鉄平</p>
+                </div>
+                <div class="compnay-point mb-5">
+                    <p class="point-title border-bottom border-top hiragino text-center">住所</p>
+                    <p class="point-detail">〒158-0094 東京都世田谷区玉川3丁目20番2号501</p>
+                </div>
+            </div>
+        </div>
+        <p class="mt-2 text-center footer-text">CONTACT</p>
+    </div>
+    <a href="{% url 'contact' %}" class="" id="contact" style="text-decoration: none;">
+        <div class="container-white_bg padding-x">
+            <div class="contact py-2">
+                <div class="text-center">
+                    <p class="contact-profile mb-0">お問い合わせ</p>
+                    <p class="title poppins-semibold">CONTACT</p>
+                </div>
+            </div>
+        </div>
+    </a>
+    <footer class="footer padding-x" id="footer">
+        <p>@ 2021 ALL RIGHTS RESERVED. BARYON PARTNERS CORPORATION LTD</p>
+        <div class="d-flex justify-content-end">
+            <p>WEBSITE BY</p>
+            <p class="fw-bolder ms-3">MDC.</p>
+        </div>
+    </footer>
+    <div id="bottom-nav" style="display: none;">
+        <nav class="navbar navbar-expand-lg bg-white fixed-bottom bottom-nav">
+        </nav>
+    </div>
+</div>
+{% endblock content %}

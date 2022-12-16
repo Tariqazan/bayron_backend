@@ -1,0 +1,920 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+
+:root {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.noto-sans {
+    font-family: 'Noto Sans JP', sans-serif !important;
+}
+
+.loading-screen {
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 10000;
+}
+
+/* Center the loader */
+#loader img {
+    position: absolute;
+    background-color: #fff;
+    left: 50%;
+    top: 50%;
+    z-index: 10;
+    width: 120px;
+    height: 120px;
+    margin: -76px 0 0 -76px;
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-opacity: 0.3;
+    }
+
+    100% {
+        -webkit-opacity: 1;
+    }
+}
+
+@keyframes spin {
+    0% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
+
+
+#main-body {
+    display: none;
+}
+
+.nav-dark_bg {
+    background-color: rgba(0, 0, 0, 0.085);
+}
+
+.navbar {
+    padding-top: 0 !important;
+    padding-bottom: 50px;
+}
+
+.navbar-brand {
+    padding-top: 0 !important;
+}
+
+.navbar-brand img {
+    width: 110px;
+}
+
+.fixed {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: white;
+    right: 0;
+    z-index: 100;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+.footer-text {
+    color: #a6a6a6;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.side-text {
+    position: fixed;
+    top: 50%;
+    left: -50px;
+    transform: rotate(-90deg);
+    color: #a6a6a6;
+    font-size: .65rem;
+    z-index: 1000;
+}
+
+.banner {
+    background-image: url('../media/cover-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.overlay-banner {
+    position: absolute;
+    width: 50%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgb(31, 56, 100, 0.8);
+    z-index: 2;
+    height: 100%;
+    animation-name: slideDown;
+    animation-duration: 1s;
+}
+
+@keyframes slideDown {
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+.overlay-banner-right {
+    position: absolute;
+    width: 50%;
+    top: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(0, 0, 0, 0.488);
+    z-index: 2;
+    height: 0;
+    animation-name: slideUp;
+    animation-duration: 1s;
+}
+
+#info_3,
+#info_1,
+#info_2,
+#company_info {
+    animation-name: slideDownDiv;
+    animation-duration: 0.8s;
+}
+
+@keyframes slideDownDiv {
+    from {
+        margin-top: -100px;
+    }
+
+    to {
+        margin-top: 0;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        height: 100%;
+    }
+
+    to {
+        height: 0;
+    }
+}
+
+.logo,
+.corporation-logo {
+    position: relative;
+    z-index: 3;
+}
+
+.corporation-logo {
+    text-align: end;
+    max-width: 50%;
+    margin-top: -90px;
+}
+
+.corporation-logo img {
+    width: 130px;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 3;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.banner-content h1 {
+    font-size: 4.5rem;
+    color: #ffffff;
+    font-weight: 700;
+    animation-name: textReveal;
+    animation-duration: 1.5s;
+}
+
+.banner-content p {
+    font-size: 1.17rem;
+    color: #f2f2f2e3;
+    font-weight: 200;
+    animation-name: textReveal;
+    animation-duration: 2s;
+}
+
+@keyframes textReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    25% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    75% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.container-white_bg {
+    width: 100%;
+    background-color: #ffffff;
+    padding-top: calc(var(--bs-gutter-x) * 3.5);
+    padding-bottom: 0;
+    margin: auto;
+}
+
+.padding-transition {
+    animation-name: paddingTransition;
+    animation-duration: 0.8s;
+}
+
+.padding-x {
+    padding-left: calc(var(--bs-gutter-x) * 2.5);
+    padding-right: calc(var(--bs-gutter-x) * 2.5);
+}
+
+@keyframes paddingTransition {
+    from {
+        padding-left: calc(var(--bs-gutter-x) * 0);
+        padding-right: calc(var(--bs-gutter-x) * 0);
+    }
+
+    to {
+        padding-left: calc(var(--bs-gutter-x) * 2.5);
+        padding-right: calc(var(--bs-gutter-x) * 2.5);
+    }
+}
+
+
+
+.container-white_bg {
+    display: flex;
+    flex-direction: row;
+}
+
+.bayron-partners-corporation-content-logo {
+    position: relative;
+    width: 50%;
+    height: 75vh;
+    background-image: url('../media/bayron-partners-corporation-content.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.bayron-partners-corporation-content-logo img {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.img_slide_up {
+    animation: imgSlideUp 0.5s alternate;
+}
+
+@keyframes imgSlideUp {
+    from {
+        transform: translate(50%, 300px);
+    }
+
+    to {
+        right: 50%;
+        transform: translate(50%, -50%);
+    }
+}
+
+.bayron-partners-corporation-content_bg {
+    background-color: #203864;
+    width: 50%;
+    min-height: 100%;
+}
+
+.bayron-partners-corporation-content {
+    padding: 50px;
+    height: 100%;
+    z-index: 3;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.bayron-partners-corporation-content img {
+    width: 80%;
+    height: auto;
+}
+
+.slide_down_text {
+    animation: slideDownText ease-in-out 0.3s alternate;
+}
+
+@keyframes slideDownText {
+    from {
+        transform: translateY(-250px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.slide_up_text {
+    animation: slideupText ease-in-out 0.3s alternate;
+}
+
+@keyframes slideupText {
+    from {
+        transform: translateY(80px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.slide_up_img {
+    animation: slideupImg ease-in-out 0.3s alternate;
+}
+
+@keyframes slideupImg {
+    from {
+        transform: translateY(250px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.slide_down_img {
+    animation: slidedownImg ease-in-out 0.3s alternate;
+}
+
+@keyframes slidedownImg {
+    from {
+        transform: translateY(-250px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.bayron-partners-corporation-content .title {
+    font-size: 5rem;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    line-height: 60px;
+}
+
+.bayron-partners-corporation-content .subtitle {
+    font-size: 1.625rem;
+    margin-left: 40px;
+}
+
+.bayron-partners-corporation-content .description {
+    font-size: 0.75rem;
+    font-weight: 200;
+    line-height: 25px;
+    color: #d9d9d9;
+}
+
+.product-info_bg {
+    background-color: #203864;
+    min-width: 50%;
+    min-height: 100%;
+}
+
+.product-info {
+    padding: 50px;
+    height: 100%;
+    z-index: 3;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+@keyframes slideUpText {
+    from {
+        transform: translateY(-80px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.product-info .category {
+    font-size: 1rem;
+}
+
+.product-info .title {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+}
+
+.partner-company {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.partner-logo {
+    width: 90px;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+}
+
+.product-img img {
+    width: 100%;
+    height: 75vh;
+}
+
+@keyframes imgSlideDown {
+    from {
+        transform: translateY(-80px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.company-info {
+    width: 100%;
+}
+
+.company-info_title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.company-info_description {
+    font-size: 0.92rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 30px;
+    max-width: 90%;
+}
+
+.company-info_btn_blue {
+    border-radius: 10px;
+    background-color: #1f4e79;
+    color: white;
+    font-size: 0.67rem;
+    border: 1px solid #000;
+    padding: 8px 30px;
+    margin-right: 30px;
+    transition: .5s;
+}
+
+.company-info_btn_blue:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid black;
+}
+
+.company-info_btn {
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    font-size: 0.67rem;
+    border: none;
+    padding: 8px 30px;
+    border: 1px solid black;
+    transition: .5s;
+}
+
+.company-info_btn:hover {
+    background-color: #1f4e79;
+    color: #fff;
+    border: none;
+}
+
+.item-img {
+    position: relative;
+    max-width: 100%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: end;
+}
+
+.item-img_main {
+    display: block;
+    width: 100%;
+    height: 350px;
+}
+
+.item_img-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 225px;
+    height: auto;
+}
+
+.img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #1f4e79;
+    overflow: hidden;
+    width: 100%;
+    height: 50px;
+    transition: .5s ease;
+}
+
+.item-img:hover .img-overlay {
+    height: 100%;
+}
+
+.item-img .text {
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.item-img .sub-text {
+    font-family: 'Noto Sans JP', sans-serif !important;
+    color: white;
+    font-size: .67rem;
+    font-weight: 300;
+    position: absolute;
+    top: 85%;
+    left: 30%;
+    display: none;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: start;
+    max-width: 150px;
+}
+
+.item-img:hover .sub-text {
+    display: block;
+}
+
+.company {
+    padding: 4rem;
+}
+
+.company,
+.contact,
+.contact-form {
+    font-family: 'Noto Sans JP', sans-serif !important;
+    background-color: #203864;
+    width: 100%;
+}
+
+.contact {
+    color: #fff;
+    transition: 0.5s;
+}
+
+.contact-profile {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.contact .title {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+}
+
+.contact:hover {
+    background-color: #fff;
+    color: #203864;
+}
+
+.company-profile,
+.contact-form-profile {
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+.company .title,
+.contact-form .title {
+    font-size: 4.5rem;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.compnay-point,
+.contact-point {
+    display: flex;
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+}
+
+.compnay-point .point-title,
+.contact-point .point-title {
+    width: 20%;
+    margin-bottom: 0 !important;
+    padding: 15px 0;
+    font-size: 0.8rem;
+}
+
+.compnay-point .point-detail,
+.contact-point .point-detail {
+    font-weight: 200;
+    width: 70%;
+    margin-bottom: 0 !important;
+    padding: 15px 0;
+    margin-left: 30px;
+    color: #cccccc;
+}
+
+.contact-info {
+    border: none;
+    background-color: transparent;
+    font-weight: 200;
+    width: 70%;
+    margin-bottom: 0 !important;
+    padding: 15px 0;
+    margin-left: 30px;
+    color: #cccccc;
+}
+
+.contact-info::placeholder {
+    color: #cccccc;
+}
+
+.border-top {
+    border-top: 2px solid #d9d9d9;
+}
+
+.border-bottom {
+    border-bottom: 2px solid #d9d9d9;
+}
+
+.contact-btn {
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #fff;
+    padding: 3px 0;
+    font-size: 1rem;
+    border-radius: 15px;
+    width: 100px;
+}
+
+.footer {
+    font-size: 0.67rem;
+    margin-top: 20px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bottom-nav {
+    height: 45px;
+    z-index: 10000;
+}
+
+@media only screen and (max-width:600px) {
+
+    .container-white_bg {
+        flex-direction: column;
+    }
+
+    .company .title,
+    .contact .title {
+        font-size: 3rem;
+    }
+
+    .product-info .title {
+        font-size: 2rem;
+    }
+
+    .bayron-partners-corporation-content-logo,
+    .bayron-partners-corporation-content_bg {
+        width: 100%;
+    }
+
+    .bayron-partners-corporation-content .title {
+        font-size: 2rem;
+    }
+
+    .bayron-partners-corporation-content .subtitle {
+        font-size: 1rem;
+    }
+
+    .partner-logo {
+        height: 35px;
+    }
+
+    .bayron-partners-corporation-content,
+    .product-info {
+        padding: 10px;
+    }
+
+    .product-info .category {
+        padding: 0;
+        margin-top: 10px;
+    }
+
+    .bayron-partners-corporation-content-logo {
+        height: 115px;
+    }
+
+    .bayron-partners-corporation-content-logo img {
+        height: 80px;
+    }
+
+    .product-img img {
+        height: 185px;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+
+    .side-text {
+        display: none !important;
+    }
+
+    .bayron-partners-corporation-content .description {
+        font-size: 0.5rem;
+    }
+
+    .bottom-nav {
+        height: 30px;
+        z-index: 10000;
+    }
+
+    .fixed {
+        position: relative;
+    }
+
+    #company_info,
+    #company,
+    #contact {
+        display: block !important;
+    }
+
+    #info_1,
+    #info_2,
+    #info_3 {
+        display: none !important;
+    }
+
+    .company {
+        padding: 0.5rem;
+    }
+    .padding-x {
+        padding-left: calc(var(--bs-gutter-x) * 1.5);
+        padding-right: calc(var(--bs-gutter-x) * 1.5);
+    }
+    
+    @keyframes paddingTransition {
+        from {
+            padding-left: calc(var(--bs-gutter-x) * 0);
+            padding-right: calc(var(--bs-gutter-x) * 0);
+        }
+    
+        to {
+            padding-left: calc(var(--bs-gutter-x) * 1.5);
+            padding-right: calc(var(--bs-gutter-x) * 1.5);
+        }
+    }
+    
+}
+
+.align-item_center {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (max-width:1000px) {
+    .product-info .title {
+        font-size: 3rem;
+    }
+
+    .partner-company {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width:1400px) {
+    .item-img {
+        max-width: 85%;
+    }
+
+    .item-img_main {
+        height: 450px;
+    }
+
+    .bottom-nav {
+        height: 115px;
+    }
+
+    .navbar {
+        padding-bottom: 80px;
+    }
+
+    #info_1,
+    #info_2,
+    #info_3 {
+        margin-top: 25px;
+    }
+}
