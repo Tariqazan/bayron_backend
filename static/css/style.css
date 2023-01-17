@@ -32,14 +32,16 @@ body {
 
 /* Center the loader */
 #loader img {
-    position: absolute;
-    background-color: #fff;
-    left: 50%;
-    top: 50%;
-    z-index: 10;
-    width: 120px;
+    position: fixed;
+    z-index: 999;
+    overflow: show;
+    margin: auto;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     height: 120px;
-    margin: -76px 0 0 -76px;
+    width: 120px;
 }
 
 @-webkit-keyframes spin {
@@ -232,6 +234,10 @@ body {
     text-align: end;
     max-width: 50%;
     margin-top: -90px;
+}
+
+.logo img {
+    margin-top: 10px;
 }
 
 .corporation-logo img {
@@ -539,7 +545,8 @@ body {
     font-weight: 400;
     letter-spacing: 1px;
     line-height: 30px;
-    max-width: 90%;
+    max-width: 100%;
+    text-align: justify;
 }
 
 .company-info_btn_blue {
@@ -771,6 +778,27 @@ body {
 
 @media only screen and (max-width:600px) {
 
+    .banner-content h1 {
+        font-size: 3rem;
+    }
+
+    .compnay-point {
+        display: block;
+    }
+
+    .compnay-point .point-title {
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+    .compnay-point .point-detail {
+        text-align: center;
+    }
+
+    .navbar {
+        padding-bottom: 0;
+    }
+
     .container-white_bg {
         flex-direction: column;
     }
@@ -859,23 +887,24 @@ body {
     .company {
         padding: 0.5rem;
     }
+
     .padding-x {
         padding-left: calc(var(--bs-gutter-x) * 1.5);
         padding-right: calc(var(--bs-gutter-x) * 1.5);
     }
-    
+
     @keyframes paddingTransition {
         from {
             padding-left: calc(var(--bs-gutter-x) * 0);
             padding-right: calc(var(--bs-gutter-x) * 0);
         }
-    
+
         to {
             padding-left: calc(var(--bs-gutter-x) * 1.5);
             padding-right: calc(var(--bs-gutter-x) * 1.5);
         }
     }
-    
+
 }
 
 .align-item_center {
