@@ -782,6 +782,10 @@ body {
         font-size: 3rem;
     }
 
+    .container-white_bg {
+        padding-top: 15px;
+    }
+
     .compnay-point {
         display: block;
     }
@@ -792,6 +796,21 @@ body {
     }
 
     .compnay-point .point-detail {
+        text-align: center;
+    }
+
+    .contact-point {
+        display: block;
+    }
+
+    .contact-point .point-title {
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+    .contact-info {
+        width: 100%;
+        margin-left: 0;
         text-align: center;
     }
 

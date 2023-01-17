@@ -137,14 +137,14 @@ function scrollPage(e) {
             $("#contact").hide();
         } else if (next_id === 'company_info') {
             document.getElementById("bottom-nav").style.display = "none";
-            $("#company_info").addClass('fixed');
+            // $("#company_info").addClass('fixed');
             $("#company_info").show();
             $("#banner").hide();
             $("#info_2").hide();
             $("#info_1").hide();
             $("#info_3").hide();
         } else {
-            $("#company_info").removeClass('fixed');
+            // $("#company_info").removeClass('fixed');
             $("#company").show();
             $("#contact").show();
         }
